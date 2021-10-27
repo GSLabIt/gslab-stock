@@ -1,0 +1,128 @@
+#. module: ooops_stock_quantity_difference
+#: model:ir.actions.server,name:ooops_stock_quantity_difference.call_action_stock_quantity_picking_type
+msgid "Call Stock Qty - Picking Type Discrepancy"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.actions.server,name:ooops_stock_quantity_difference.call_action_stock_quantity_difference
+msgid "Call Stock Qty Difference"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__difference
+msgid "Difference"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__float_compare
+msgid "Float compare"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__id
+msgid "ID"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__name
+msgid "Name"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: code:addons/ooops_stock_quantity_difference/models/stock_difference.py:229
+#, python-format
+msgid "No stock quant to fix"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model,name:ooops_stock_quantity_difference.model_ooops_report_stock_quantity_difference
+msgid "Ooops Stock Quantity Difference Report"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__product_id
+msgid "Product"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: sql_constraint:ooops.report.stock.quantity.difference:0
+msgid "Product already in table"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__incoming
+msgid "Qty Incoming"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__outgoing
+msgid "Qty Outgoing"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.actions.server,name:ooops_stock_quantity_difference.cron_check_discrepancy_ir_actions_server
+#: model:ir.cron,cron_name:ooops_stock_quantity_difference.cron_check_discrepancy
+#: model:ir.cron,name:ooops_stock_quantity_difference.cron_check_discrepancy
+msgid "Report Stock Qty Difference"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.ui.menu,name:ooops_stock_quantity_difference.stock_qty_difference_picking_type_menu
+msgid "Stock Qty - Picking Type Discrepancy"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.actions.act_window,name:ooops_stock_quantity_difference.action_stock_quantity_difference
+#: model:ir.ui.menu,name:ooops_stock_quantity_difference.stock_qty_difference_menu
+msgid "Stock Qty Difference"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__quant_stock_ontable
+msgid "Stock Qty on Table"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model_terms:ir.ui.view,arch_db:ooops_stock_quantity_difference.ooops_report_stock_quantity_difference_search
+msgid "Stock Quantities Difference"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model:ir.model.fields,field_description:ooops_stock_quantity_difference.field_ooops_report_stock_quantity_difference__supposed_stock
+msgid "Supposed Stock"
+msgstr ""
+
+#. module: ooops_stock_quantity_difference
+#: model_terms:ir.actions.act_window,help:ooops_stock_quantity_difference.action_stock_quantity_difference
+msgid "There are no product stock quantity differences"
+msgstr ""

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- model.name tree view -->
+    <record id="ooops_report_stock_quantity_difference_tree" model="ir.ui.view">
+        <field name="name">ooops.report.stock.quantity.difference.view.tree</field>
+        <field name="model">ooops.report.stock.quantity.difference</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <!-- Add your fields here -->
+                <field name="product_id" />
+                <field name="incoming" />
+                <field name="outgoing" />
+                <field name="supposed_stock" />
+                <field name="quant_stock_ontable" />
+                <field name="difference" />
+                <field name="float_compare" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <!-- model.name search view -->
+    <record id="ooops_report_stock_quantity_difference_search" model="ir.ui.view">
+        <field name="name">ooops.report.stock.quantity.difference.view.search</field>
+        <field name="model">ooops.report.stock.quantity.difference</field>
+        <field name="arch" type="xml">
+            <search string="Stock Quantities Difference">
+                <!-- Add your fields here -->
+                <field name="product_id" />
+            </search>
+        </field>
+    </record>
+    <record id="action_stock_quantity_difference" model="ir.actions.act_window">
+        <field name="name">Stock Qty Difference</field>
+        <field name="res_model">ooops.report.stock.quantity.difference</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="ooops_report_stock_quantity_difference_tree" />
+        <field
+            name="search_view_id"
+            ref="ooops_report_stock_quantity_difference_search"
+        />
+        <field name="domain">[('float_compare', '!=', 0)]</field>
+        <field name="context">{'general_buttons': [{
+            'action': "action_balance_qty",
+            'name': "Fix Stock Qty",
+            'model': 'ooops.report.stock.quantity.difference'
+        }]}</field>
+        <field name="target">current</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                There are no product stock quantity differences
+            </p>
+        </field>
+    </record>
+    <record id="call_action_stock_quantity_difference" model="ir.actions.server">
+        <field name="name">Call Stock Qty Difference</field>
+        <field name="model_id" ref="model_ooops_report_stock_quantity_difference" />
+        <field name="state">code</field>
+        <field name="code">action = model.action_stock_difference()</field>
+    </record>
+    <record id="call_action_stock_quantity_picking_type" model="ir.actions.server">
+        <field name="name">Call Stock Qty - Picking Type Discrepancy</field>
+        <field name="model_id" ref="model_ooops_report_stock_quantity_difference" />
+        <field name="state">code</field>
+        <field
+            name="code"
+        >action = model.action_stock_difference(check_picking_type=True)</field>
+    </record>
+    <!--
+    <record id="action_fix_stock_quant" model="ir.actions.server">
+        <field name="name">Fix Stock Qty</field>
+        <field name="model_id" ref="model_ooops_report_stock_quantity_difference" />
+        <field name="binding_model_id" ref="ooops_stock_quantity_difference.model_ooops_report_stock_quantity_difference" />
+        <field name="state">code</field>
+        <field name="code">
+            action = model.action_balance_qty()
+        </field>
+    </record>
+    -->
+    <menuitem
+        id="stock_qty_difference_menu"
+        name="Stock Qty Difference"
+        action="call_action_stock_quantity_difference"
+        groups="base.group_system"
+        parent="stock.menu_warehouse_report"
+        sequence="210"
+    />
+    <menuitem
+        id="stock_qty_difference_picking_type_menu"
+        name="Stock Qty - Picking Type Discrepancy"
+        action="call_action_stock_quantity_picking_type"
+        groups="base.group_system"
+        parent="stock.menu_warehouse_report"
+        sequence="220"
+    />
+</odoo>
